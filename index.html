@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Crud Nuvem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Filmes</a></li>
+      <li><a href="#">Séries</a></li>
+      <li><a href="#">Desenhos</a></li>
+      <li><a href="#">Novelas</a></li>
+    </ul>
+  </nav>
+  <div>
+    <section class="content">
+
+      <section class="form">
+        <h1>Crud Filmes</h1>
+        <div class="form-group">
+          <label for="nomeFilme">Nome:</label>
+          <input id="nomeFilme" type="text" placeholder="Nome" />
+        </div>
+        <div class="form-group">
+          <label for="generoFilme">Genero:</label>
+          <input id="generoFilme" type="text" placeholder="Gênero" />
+        </div>
+        <div class="form-group">
+          <label for="lancamentoFilme">Lançamento:</label>
+          <input id="lancamentoFilme" type="number" placeholder="Lançamento" />
+
+        </div>
+        <button id="createFilme">Cadastrar</button>
+      </section>
+
+      <section class="list">
+        <h1>Lista de Filmes</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Id Filme</th>
+              <th>Nome Filme</th>
+              <th>Genero Filme</th>
+              <th>Lançamento Filme</th>
+              <th>Editar</th>
+              <th>Excluir</th>
+            </tr>
+          </thead>
+          <tbody class="tableFilme"></tbody>
+        </table>
+      </section>
+
+    </section>
+
+
+  </div>
+  <div>
+    <section class="content">
+
+      <section class="form">
+        <h1>Crud Novela</h1>
+        <div class="form-group">
+          <label for="nomeNovela">Nome:</label>
+          <input id="nomeNovela" type="text" placeholder="Nome" />
+        </div>
+        <div class="form-group">
+          <label for="generoNovela">Genero:</label>
+          <input id="generoNovela" type="text" placeholder="Gênero" />
+        </div>
+        <div class="form-group">
+          <label for="lancamentoNovela">Lançamento:</label>
+          <input id="lancamentoNovela" type="number" placeholder="Lançamento" />
+
+        </div>
+        <button id="createNovela">Cadastrar</button>
+      </section>
+
+      <section class="list">
+        <h1>Lista de Novelas</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Id Novela</th>
+              <th>Nome Novela</th>
+              <th>Genero Novela</th>
+              <th>Lançamento Novela</th>
+              <th>Editar</th>
+              <th>Excluir</th>
+            </tr>
+          </thead>
+          <tbody class="tableNovelas"></tbody>
+        </table>
+      </section>
+    </section>
+
+
+  </div>
+  <div>
+    <section class="content">
+
+      <section class="form">
+        <h1>Crud Séries</h1>
+        <div class="form-group">
+          <label for="nomeSerie">Nome:</label>
+          <input id="nomeSerie" type="text" placeholder="Nome" />
+        </div>
+        <div class="form-group">
+          <label for="generoSerie">Gênero:</label>
+          <input id="generoSerie" type="text" placeholder="Gênero" />
+        </div>
+        <div class="form-group">
+          <label for="lancamentoSerie">Lançamento:</label>
+          <input id="lancamentoSerie" type="number" placeholder="Lançamento" />
+
+        </div>
+        <button id="createSerie">Cadastrar</button>
+      </section>
+
+      <section class="list">
+        <h1>Lista de Séries</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Id Série</th>
+              <th>Nome Série</th>
+              <th>Genero Série</th>
+              <th>Lançamento Série</th>
+              <th>Editar</th>
+              <th>Excluir</th>
+            </tr>
+          </thead>
+          <tbody class="tableSeries"></tbody>
+        </table>
+      </section>
+
+    </section>
+
+  </div>
+  <div>
+    <section class="content">
+
+      <section class="form">
+        <h1>Crud Desenhos</h1>
+        <div class="form-group">
+          <label for="nomeDesenho">Nome:</label>
+          <input id="nomeDesenho" type="text" placeholder="Nome" />
+        </div>
+        <div class="form-group">
+          <label for="generoDesenho">Genero:</label>
+          <input id="generoDesenho" type="text" placeholder="Gênero" />
+        </div>
+        <div class="form-group">
+          <label for="lancamentoDesenho">Lançamento:</label>
+          <input id="lancamentoDesenho" type="number" placeholder="Lançamento" />
+        </div>
+        <button id="createDesenho">Cadastrar</button>
+      </section>
+
+      <section class="list">
+        <h1>Lista de Desenho</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Id Desenho</th>
+              <th>Nome Desenho</th>
+              <th>Genero Desenho</th>
+              <th>Lançamento Desenho</th>
+              <th>Editar</th>
+              <th>Excluir</th>
+            </tr>
+          </thead>
+          <tbody class="tableDesenhos"></tbody>
+        </table>
+      </section>
+
+    </section>
+
+    <script src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <script src="script.js"></script>
+  </div>
+
+  <footer>
+    <div class="rodape">
+      <grid-container>
+        <grid-item>
+          <u><b>Equipe:</b></u>
+          </style>
+        </grid-item>
+        <grid-item> <a href="https://github.com/BrunoAAM">Bruno Andrade Aguiar Marques</grid-item>
+        <grid-item> <a href="https://github.com/geraldoponte">Geraldo Giovani Pinho da Ponte</grid-item>
+        <grid-item> <a href="https://github.com/lucasaguiar-dev">Lucas Aguiar Marques</grid-item>
+        <grid-item> <a href="https://github.com/RobCardo">Robson Silva Cardoso</grid-item>
+      </grid-container>
+      <p></p>
+      <p><i>Powered by <a href="https://vercel.com/">Vercel</a> and <a href="https://www.back4app.com/">Back4app</a></i>
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
