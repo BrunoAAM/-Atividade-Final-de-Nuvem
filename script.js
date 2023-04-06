@@ -30,7 +30,7 @@ async function createParseFilm() {
     alert(`Error: ${error.message}`);
   }
 }
-// Define a função do button, caso exista um selectedProduto
+
 document.getElementById("createFilme").addEventListener("click", async function() {
   if (selectedFilm) {
     updateParseFilm();
@@ -39,7 +39,7 @@ document.getElementById("createFilme").addEventListener("click", async function(
   }
 });
 
-// Listar Produtos
+
 const Filmes = Parse.Object.extend("Filmes");
 const query = new Parse.Query(Filmes);
 
@@ -76,7 +76,7 @@ async function deleteFilm(filmId) {
   location.reload();
 }
 
-// Selecionar e Alterar Produto
+
 let selectedFilm = null;
 function editFilm(id) {
   const Produtos = Parse.Object.extend("Filmes");
@@ -86,7 +86,7 @@ function editFilm(id) {
     document.getElementById("lancamentoFilme").value = filme.get("lancamentoFilme");
     document.getElementById("generoFilme").value = filme.get("generoFilme");
     document.getElementById("createFilme").textContent = "Atualizar";
-    selectedFilm = filme.id; // armazena a referência do objeto que será editado
+    selectedFilm = filme.id;
 
   });
 }
@@ -137,7 +137,7 @@ async function createParseSerie() {
     alert(`Error: ${error.message}`);
   }
 }
-// Define a função do button, caso exista um selectedProduto
+
 document.getElementById("createSerie").addEventListener("click", async function() {
   if (selectedSerie) {
     updateParseSerie();
@@ -146,7 +146,7 @@ document.getElementById("createSerie").addEventListener("click", async function(
   }
 });
 
-// Listar Series
+
 const Series = Parse.Object.extend("Series");
 const querySerie = new Parse.Query(Series);
 
@@ -173,7 +173,7 @@ querySerie.find().then((series) => {
   });
 });
 
-// Excluir produto
+
 async function deleteSerie(serieId) {
   const Serie = Parse.Object.extend("Series");
   const query = new Parse.Query(Serie);
@@ -183,8 +183,8 @@ async function deleteSerie(serieId) {
   location.reload();
 }
 
-// Selecionar e Alterar Produto
-let selectSerie = null;
+
+let selectedSerie = null;
 function editSerie(id) {
   const Series = Parse.Object.extend("Series");
   const querySerie = new Parse.Query(Series);
@@ -193,7 +193,7 @@ function editSerie(id) {
     document.getElementById("lancamentoSerie").value = serie.get("lancamentoSerie");
     document.getElementById("generoSerie").value = serie.get("generoSerie");
     document.getElementById("createSerie").textContent = "Atualizar";
-    selectedSerie = serie.id; // armazena a referência do objeto que será editado
+    selectedSerie = serie.id;
 
   });
 }
@@ -221,7 +221,7 @@ async function updateParseSerie() {
 
 // ------------------------------------------Novelas----------------------------------------------//
 
-// Cadastrar Novela 
+
 async function createParseNovela() {
 
   let novela = new Parse.Object('Novela');
@@ -244,7 +244,7 @@ async function createParseNovela() {
     alert(`Error: ${error.message}`);
   }
 }
-// Define a função do button, caso exista um selectedProduto
+
 document.getElementById("createNovela").addEventListener("click", async function() {
   if (selectedNovela) {
     updateParseNovela();
@@ -253,7 +253,7 @@ document.getElementById("createNovela").addEventListener("click", async function
   }
 });
 
-// Listar Series
+
 const Novela = Parse.Object.extend("Novela");
 const queryNovela = new Parse.Query(Novela);
 
@@ -280,7 +280,7 @@ queryNovela.find().then((novelas) => {
   });
 });
 
-// Excluir produto
+
 async function deleteNovela(novelaId) {
   const Novela = Parse.Object.extend("Novela");
   const query = new Parse.Query(Novela);
@@ -290,7 +290,7 @@ async function deleteNovela(novelaId) {
   location.reload();
 }
 
-// Selecionar e Alterar Produto
+
 let selectedNovela = null;
 function editNovela(id) {
   const Novela = Parse.Object.extend("Novela");
@@ -300,7 +300,7 @@ function editNovela(id) {
     document.getElementById("lancamentoNovela").value = novela.get("lancamentoNovela");
     document.getElementById("generoNovela").value = novela.get("generoNovela");
     document.getElementById("createNovela").textContent = "Atualizar";
-    selectedNovela = novela.id; // armazena a referência do objeto que será editado
+    selectedNovela = novela.id;
 
   });
 }
@@ -329,7 +329,7 @@ async function updateParseNovela() {
 
 // ------------------------------------------Desenhos---------------------------------------------//
 
-// Cadastrar Novela 
+
 async function createParseDesenho() {
 
   let desenho = new Parse.Object('Desenho');
@@ -352,7 +352,7 @@ async function createParseDesenho() {
     alert(`Error: ${error.message}`);
   }
 }
-// Define a função do button, caso exista um selectedProduto
+
 document.getElementById("createDesenho").addEventListener("click", async function() {
   if (selectedDesenho) {
     updateParseDesenho();
@@ -361,7 +361,6 @@ document.getElementById("createDesenho").addEventListener("click", async functio
   }
 });
 
-// Listar Series
 const Desenho = Parse.Object.extend("Desenho");
 const queryDesenho = new Parse.Query(Desenho);
 
@@ -388,7 +387,7 @@ queryDesenho.find().then((desenhos) => {
   });
 });
 
-// Excluir produto
+
 async function deleteDesenho(desenhoId) {
   const Desenho = Parse.Object.extend("Desenho");
   const query = new Parse.Query(Desenho);
@@ -398,7 +397,7 @@ async function deleteDesenho(desenhoId) {
   location.reload();
 }
 
-// Selecionar e Alterar Produto
+
 let selectedDesenho = null;
 function editDesenho(id) {
   const Desenho = Parse.Object.extend("Desenho");
@@ -408,7 +407,7 @@ function editDesenho(id) {
     document.getElementById("lancamentoDesenho").value = desenho.get("lancamentoDesenho");
     document.getElementById("generoDesenho").value = desenho.get("generoDesenho");
     document.getElementById("createDesenho").textContent = "Atualizar";
-    selectedDesenho = desenho.id; // armazena a referência do objeto que será editado
+    selectedDesenho = desenho.id;
 
   });
 }
